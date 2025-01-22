@@ -31,6 +31,6 @@ class RegisterController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        return redirect()->route('register')->with('success', 'Регистрация успешна. Теперь вы можете войти.');
+        return redirect()->route('login.show')->with('success', 'Регистрация успешна. Теперь вы можете войти.');
     }
 }
